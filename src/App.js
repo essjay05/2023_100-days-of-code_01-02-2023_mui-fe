@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Typography, AppBar, Card, CardActions, CardContent, CardMedia, CssBaseline, Grid, Toolbar, Container } from '@mui/material';
+import { PhotoCamera } from '@mui/icons-material';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <CssBaseline/>
+      <AppBar position='relative'>
+        <Toolbar>
+          <PhotoCamera/>
+          <Typography variant='h6'>
+            Photo Album
+          </Typography>
+        </Toolbar>
+      </AppBar>
+      <main>
+        <div>
+          <Container maxWidth='sm'>
+            <Typography variant='h2' align='center' color='textPrimary' gutterBotto >
+              Photo Album
+            </Typography>
+            <Typography variant='h5' align='center' color='textSecondary' paragraph>
+              Hello everyone, this is a photo album and I'm trying to make this sentence as long as posible to see how it fits on the screen.
+            </Typography>
+          </Container>
+        </div>
+      </main>
+    </>
   );
 }
 
